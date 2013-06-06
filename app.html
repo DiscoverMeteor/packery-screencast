@@ -1,0 +1,26 @@
+<head>
+  <title>Integrating 3rd Party UI Libraries</title>
+  <script src="http://packery.metafizzy.co/packery.pkgd.min.js"></script>
+</head>
+
+<body>
+  {{> ticketGrid}}
+</body>
+
+<template name="ticketGrid">
+  <div class="container">
+    {{#each tickets}}
+      {{> ticket}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="ticket">
+  <div id="{{_id}}" class="card">
+    <h3>{{subject}}</h3>
+    <p>
+      {{description}}
+    </p>
+    <p>{{priority}}</p>
+  </div>
+</template>
